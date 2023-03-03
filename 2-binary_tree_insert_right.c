@@ -12,7 +12,7 @@
  * Description: If parents already has a right-child, the node takes
  * its place and the old right-child is set as the right-child of new node
  */
-binary_tree_t *binary_tree_insert_right(binary_tree *parent, int value)
+binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
 {
 	binary_tree_t *new;
 
@@ -25,7 +25,7 @@ binary_tree_t *binary_tree_insert_right(binary_tree *parent, int value)
 
 	if (parent->right != NULL)
 	{
-		new->right = paent->right;
+		new->right = parent->right;
 		parent->right->parent = new;
 	}
 	parent->right = new;
